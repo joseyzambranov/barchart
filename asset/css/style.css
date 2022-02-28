@@ -26,23 +26,21 @@
 }
 html{
     height: 100%;
-    
+
 }
 
+
 body{
-    
     background-color:var(--first-color);
     display: flex;
-    
     justify-content: center;
     text-align: center;
-    height: 100%;
-   
+   flex-wrap: wrap;
+   height: 100%;
 }
 
 
 svg{
-    
     background-color: var(--first-color-alt);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -61,28 +59,32 @@ svg{
 
 
 #tooltip{
-
+  
+    width: 100%;
+    margin-top: 10px;
+    color: var(--container-color);
+    font-size: 28px;
     
-    position:absolute;			
-    text-align: center;			
-    width: 100px;					
-    height: 30px;					
-    padding: 10px;				
-    font: 18px;		
-    background: var(--first-color-lighter);	
-    border: 0px;		
-    border-radius: 8px;			
-    pointer-events: none;	
-    color: var(--container-color);	
 }
 #title{
     font-size: 30px;
     fill:var(--container-color);
+    text-align: center;
 }
-
 @media screen and (max-width:800px){
     body{
         flex-direction: column;
     }
-    
+    #tooltip{
+  
+        position: fixed;
+        margin-top: 10px;
+        color: var(--container-color);
+        font-size: 28px;
+        
+    }
+    #title{
+        font-size: 18px;
+        text-align: center;
+    }
 }
